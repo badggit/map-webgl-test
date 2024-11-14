@@ -249,8 +249,8 @@ const droneLayer = (map: Map): DroneControl => {
       gl.bindBuffer(gl.ARRAY_BUFFER, this.textureCoordBuffer);
       gl.vertexAttribPointer(this.aTextureCoord, 2, gl.FLOAT, false, 0, 0);
 
-      // Set uniform values
-      const size = 0.0000005; // Adjust size as needed
+      // Set uniform values //
+      const size = 0.0000005; // Drone size
       const mercatorPosition = MercatorCoordinate.fromLngLat({ lng: dronePosition[0], lat: dronePosition[1] }, dronePosition[2]);
 
       gl.uniformMatrix4fv(this.uMatrix, false, matrix);
